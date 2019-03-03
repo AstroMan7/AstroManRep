@@ -33,8 +33,7 @@ def read_colums(lines):
             return graph  # after all data entered the graph return it
         if len(header) == len(values):
             for column in range(len(header)):
-                graph[header[column]] += [
-                    float(values[column])]  # add to each key (header) the values and return the dict
+                graph[header[column]] += [float(values[column])]  # add to each key (header) the values and return the dict
         else:
             print('Input file error: Data lists are not the same lenth.')
             return False
@@ -64,8 +63,7 @@ def read_rows(lines):
 
 
 def check_length(graph):
-    graph_items = [len(value) for key, value in
-                   graph.items()]  # create a list with the length of each key-values///???????/
+    graph_items = [len(value) for key, value in graph.items()]  # create a list with the length of each key-values
     return len(
         set(graph_items)) == 1  # return true if all arguments in list of values-count for each key is the same (uniqe)
 
@@ -201,8 +199,7 @@ def cal_b(graph):
 
 
 def db_square(graph):
-    db_square = cal_da_square(graph) * numerator_x_square_avg(graph) / denominator_z(
-        graph)  # Take da^2 and multiply it with (x^2)avg
+    db_square = cal_da_square(graph) * numerator_x_square_avg(graph) / denominator_z(graph)  # Take da^2 and multiply it with (x^2)avg
     return db_square
 
 
